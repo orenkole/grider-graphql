@@ -1,0 +1,19 @@
+query:
+{
+  user(id: "23") {
+    id
+    firstName
+    age
+  }
+}
+
+response: 
+{
+  "data": {
+    "user": {
+      "id": "23",
+      "firstName": "Bill",
+      "age": 10
+    }
+  }
+}

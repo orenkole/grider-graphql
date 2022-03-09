@@ -9,6 +9,7 @@ app.use('/graphql', graphqlHTTP({
 	graphiql: true
 }))
 
+// node server.js
 app.listen(4000, () => {
 	console.log('listening')
 })
