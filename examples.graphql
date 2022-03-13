@@ -2,8 +2,10 @@ query:
 
 {
   company(id: "2") {
-    id,
-    name
+    id
+    users {
+      firstName
+    }
   }
 }
 
@@ -13,7 +15,14 @@ result:
   "data": {
     "company": {
       "id": "2",
-      "name": "Google"
+      "users": [
+        {
+          "firstName": "Alex"
+        },
+        {
+          "firstName": "Nick"
+        }
+      ]
     }
   }
 }
