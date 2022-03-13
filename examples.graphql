@@ -1,44 +1,22 @@
-query:
+// query:
 
-{
-  apple: company(id: "1") {
+mutation {
+  addUser(firstName: "Stephen", age: 26) {
     id
-		name
-  }
-  google: company(id: "2") {
-    id
-    name
+    firstName
+    age
   }
 }
 
-result:
+// result 
 
 {
   "data": {
-    "apple": {
-      "id": "1",
-      "name": "Apple"
-    },
-    "google": {
-      "id": "2",
-      "name": "Google"
+    "addUser": {
+      "id": "e-qqcGE",
+      "firstName": "Stephen",
+      "age": 26
     }
   }
 }
 
-// query Fragments
-
-{
-  apple: company(id: "1") {
-			...companyDetails
-  }
-  google: company(id: "2") {
-		...companyDetails
-  }
-}
-
-fragment companyDetails on Company {
-  id
-  name
-  description
-}
