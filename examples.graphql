@@ -1,10 +1,8 @@
 // query:
 
 mutation {
-  addUser(firstName: "Stephen", age: 26) {
-    id
+  editUser(id: "23", firstName: "Billy") {
     firstName
-    age
   }
 }
 
@@ -12,10 +10,8 @@ mutation {
 
 {
   "data": {
-    "addUser": {
-      "id": "e-qqcGE",
-      "firstName": "Stephen",
-      "age": 26
+    "editUser": {
+      "firstName": "Billy"
     }
   }
 }
